@@ -1,0 +1,42 @@
+export const mediaItems = [
+  {
+    title: "Virtual–Physical Synchronization",
+    category: "Synchronization",
+    project: "Unit-Level WMR",
+    description: "Placeholder video card for physical-virtual synchronization experiments.",
+    src: "/videos/wmr-virtual-physical-sync.mp4",
+    type: "video",
+  },
+  {
+    title: "Intersection Collision Avoidance",
+    category: "Collision Avoidance",
+    project: "Car-Like UGV",
+    description: "Digital twin-based collision avoidance planning and control at an intersection.",
+    src: "/videos/ugv-intersection-avoidance.mp4",
+    type: "video",
+  },
+  {
+    title: "UAV 3D Obstacle Avoidance",
+    category: "UAV",
+    project: "UAV",
+    description: "3D obstacle avoidance, dynamic obstacles, and unknown obstacle handling.",
+    src: "/videos/uav-obstacle-avoidance.mp4",
+    type: "video",
+  },
+  {
+    title: "Urban Road Autonomous Driving",
+    category: "Autonomous Driving",
+    project: "Autonomous Vehicle",
+    description: "Urban-road trajectory planning and feedforward-feedback control.",
+    src: "/videos/av-urban-road-demo.mp4",
+    type: "video",
+  },
+  {
+    title: "Autonomous Parking Candidate Evaluation",
+    category: "Autonomous Parking",
+    project: "Autonomous Vehicle",
+    description: "Candidate trajectories are evaluated in the virtual twin before physical execution.",
+    src: "/videos/autonomous-parking-demo.mp4",
+    type: "video",
+  },
+];
