@@ -2,6 +2,7 @@
   "name": "dt-autonomous-systems",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "description": "Digital Twin Autonomous Unmanned Systems research showcase website.",
   "scripts": {
     "dev": "vite",

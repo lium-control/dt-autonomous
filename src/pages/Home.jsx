@@ -22,59 +22,73 @@ export default function Home() {
 
   return (
     <main>
-      <section className="relative mx-auto grid min-h-screen max-w-7xl items-center gap-12 px-6 pb-20 pt-32 lg:grid-cols-[1.05fr_0.95fr]">
-        <div>
-          <motion.div
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.65 }}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-300/8 px-4 py-2 text-sm text-cyan-100"
-          >
-            <Rocket size={16} />
-            Digital Twin · Planning · Control · Multi-Domain Robotics
-          </motion.div>
+      <section className="relative min-h-screen overflow-hidden">
+        <video
+          className="absolute inset-0 h-full w-full object-cover opacity-35"
+          src="/videos/av-urban-road-demo.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
 
-          <motion.h1
-            initial={{ opacity: 0, y: 22 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.08, duration: 0.75 }}
-            className="neon-text text-5xl font-semibold tracking-[-0.05em] text-white md:text-7xl"
-          >
-            Digital Twin Autonomous Unmanned Systems
-          </motion.h1>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#050816]/75 via-[#050816]/70 to-[#050816]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_30%,rgba(34,211,238,0.22),transparent_35%),radial-gradient(circle_at_80%_25%,rgba(168,85,247,0.18),transparent_35%)]" />
 
-          <motion.p
-            initial={{ opacity: 0, y: 22 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.16, duration: 0.75 }}
-            className="mt-6 max-w-2xl text-lg leading-8 text-slate-300"
-          >
-            Virtual–Physical Synchronization, Motion Planning, and Robust Control for ground,
-            aerial, marine, and legged unmanned systems.
-          </motion.p>
+        <div className="relative z-10 mx-auto grid min-h-screen max-w-7xl items-center gap-12 px-6 pb-20 pt-32 lg:grid-cols-[1.05fr_0.95fr]">
+          <div>
+            <motion.div
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.65 }}
+              className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-300/8 px-4 py-2 text-sm text-cyan-100"
+            >
+              <Rocket size={16} />
+              Digital Twin · Planning · Control · Multi-Domain Robotics
+            </motion.div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 22 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.24, duration: 0.75 }}
-            className="mt-3 max-w-2xl text-base leading-7 text-cyan-100/70"
-          >
-            面向多域自主无人系统的数字孪生建模、虚实同步、运动规划、决策控制与鲁棒跟踪研究成果展示。
-          </motion.p>
+            <motion.h1
+              initial={{ opacity: 0, y: 22 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.08, duration: 0.75 }}
+              className="neon-text text-5xl font-semibold tracking-[-0.05em] text-white md:text-7xl"
+            >
+              Digital Twin Autonomous Unmanned Systems
+            </motion.h1>
 
-          <motion.div
-            initial={{ opacity: 0, y: 22 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.32, duration: 0.75 }}
-            className="mt-9 flex flex-wrap gap-4"
-          >
-            <ButtonLink to="/projects">Explore Projects <ArrowRight className="ml-2" size={16} /></ButtonLink>
-            <ButtonLink to="/publications" variant="secondary">View Publications</ButtonLink>
-            <ButtonLink to="/gallery" variant="secondary">Watch Videos</ButtonLink>
-          </motion.div>
+            <motion.p
+              initial={{ opacity: 0, y: 22 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.16, duration: 0.75 }}
+              className="mt-6 max-w-2xl text-lg leading-8 text-slate-300"
+            >
+              Virtual–Physical Synchronization, Motion Planning, and Robust Control for ground,
+              aerial, marine, and legged unmanned systems.
+            </motion.p>
+
+            <motion.p
+              initial={{ opacity: 0, y: 22 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.24, duration: 0.75 }}
+              className="mt-3 max-w-2xl text-base leading-7 text-cyan-100/70"
+            >
+              面向多域自主无人系统的数字孪生建模、虚实同步、运动规划、决策控制与鲁棒跟踪研究成果展示。
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 22 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.32, duration: 0.75 }}
+              className="mt-9 flex flex-wrap gap-4"
+            >
+              <ButtonLink to="/projects">Explore Projects <ArrowRight className="ml-2" size={16} /></ButtonLink>
+              <ButtonLink to="/publications" variant="secondary">View Publications</ButtonLink>
+              <ButtonLink to="/gallery" variant="secondary">Watch Videos</ButtonLink>
+            </motion.div>
+          </div>
+
+          <HeroVisual />
         </div>
-
-        <HeroVisual />
       </section>
 
       <section className="mx-auto max-w-7xl px-6 pb-20">
